@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Helper
 {
-    class StringHelper
+    public class StringHelper
     {
+        public static string ToString(object number)
+        {
+            return number.ToString().Replace(',', '.');
+        }
     }
 }
