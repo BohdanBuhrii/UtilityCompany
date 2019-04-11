@@ -3,4 +3,4 @@
 	current_version integer
 )
 
-INSERT INTO version(current_version) VALUES ('0.0')
+INSERT INTO version(current_version) VALUES (0)
