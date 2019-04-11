@@ -6,7 +6,7 @@ using System.Data.Common;
 
 namespace Repository
 {
-    public abstract class ConnectionManager : IDisposable
+    public class ConnectionManager : IDisposable
     {
         protected const string connectionType = "Npgsql";
         protected readonly DbProviderFactory factory = DbProviderFactories.GetFactory(connectionType);

@@ -44,9 +44,22 @@
     <Compile Include="MigrationManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Helper\Helper.csproj">
+      <Project>{bb017fab-d17c-4a2b-aee6-6d56a4b9cfe6}</Project>
+      <Name>Helper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repository\Repository.csproj">
+      <Project>{655ee726-c0d6-482d-be1c-dfa61f00aa8d}</Project>
+      <Name>Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\1.0.txt" />
+    <Content Include="Scripts\CreateTables\tariffs.sql" />
+    <Content Include="Scripts\CreateTables\users.sql" />
+    <Content Include="Scripts\CreateTables\version.sql" />
+    <Content Include="Scripts\CreateTables\meters.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

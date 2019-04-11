@@ -137,9 +137,9 @@
       <Project>{bb017fab-d17c-4a2b-aee6-6d56a4b9cfe6}</Project>
       <Name>Helper</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Repository\RepositoryLogic.csproj">
+    <ProjectReference Include="..\Repository\Repository.csproj">
       <Project>{655ee726-c0d6-482d-be1c-dfa61f00aa8d}</Project>
-      <Name>RepositoryLogic</Name>
+      <Name>Repository</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
