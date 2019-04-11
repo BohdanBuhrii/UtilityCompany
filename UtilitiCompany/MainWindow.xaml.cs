@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UtilitiCompany.Pages;
 
 namespace UtilitiCompany
 {
@@ -23,6 +24,8 @@ namespace UtilitiCompany
         public MainWindow()
         {
             InitializeComponent();
+            var child = new Authentication();
+            this.AddChild(child);
         }
     }
 }

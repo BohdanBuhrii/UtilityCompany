@@ -1,0 +1,6 @@
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\Helper\bin\Debug\Helper.dll
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\Helper\bin\Debug\Helper.pdb
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\Helper\obj\Debug\Helper.csprojAssemblyReference.cache
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\Helper\obj\Debug\Helper.csproj.CoreCompileInputs.cache
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\Helper\obj\Debug\Helper.dll
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\Helper\obj\Debug\Helper.pdb

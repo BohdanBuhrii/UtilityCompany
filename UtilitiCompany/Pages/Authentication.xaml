@@ -7,13 +7,13 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Authentication">
-    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="207,133,119,133" Width="474">
-        <TextBox Name="EmailTB" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="27" Margin="39,-1,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="293"/>
-        <Label Name="NoAccountLb" Content="No have account?" HorizontalAlignment="Left" Height="41" Margin="39,138,0,0" VerticalAlignment="Top" Width="127"/>
-        <Label Content="Email" HorizontalAlignment="Left" Height="27" Margin="-54,-1,0,0" VerticalAlignment="Top" Width="68"/>
-        <Label Content="Password" HorizontalAlignment="Left" Height="27" Margin="-54,58,0,0" VerticalAlignment="Top" Width="68"/>
-        <Button Name="LogInBtn" Content="Log in" HorizontalAlignment="Left" Height="22" Margin="203,138,0,0" VerticalAlignment="Top" Width="129" Click="LogInBtn_Click"/>
-        <PasswordBox Name="UserPasswordBox" VerticalContentAlignment="Center"  HorizontalAlignment="Left" Height="27" Margin="39,58,0,0" VerticalAlignment="Top" Width="293"/>
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Width="484" >
+        <TextBox Name="EmailTB" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="27" Margin="91,-1,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="293"/>
+        <Label Name="NoAccountLb" Content="No have account?" HorizontalAlignment="Left" Height="41" Margin="91,138,0,0" VerticalAlignment="Top" Width="127"/>
+        <Button Name="LogInBtn" Content="Log in" HorizontalAlignment="Left" Height="22" Margin="255,138,0,0" VerticalAlignment="Top" Width="129" Click="LogInBtn_Click"/>
+        <PasswordBox Name="UserPasswordBox" VerticalContentAlignment="Center"  HorizontalAlignment="Left" Height="27" Margin="91,58,0,0" VerticalAlignment="Top" Width="293"/>
+        <Label Content="Email" HorizontalAlignment="Left" Height="27" Margin="10,0,0,0" VerticalAlignment="Top" Width="68"/>
+        <Label Content="Password" HorizontalAlignment="Left" Height="27" Margin="10,58,0,0" VerticalAlignment="Top" Width="68"/>
 
     </Grid>
 </Page>

@@ -12,7 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using RepositoryLogic.
+using Repository.ConcreteTablesLogic;
+using Helper;
 
 namespace UtilitiCompany.Pages
 {
@@ -36,7 +37,7 @@ namespace UtilitiCompany.Pages
             {
                 MessageBox.Show("User not found");
             }
-            else if (hash_password == Helper.GetHashStringSHA256(UserPasswordBox.Password))
+            else if (hash_password == HashHelper.GetHashStringSHA256(UserPasswordBox.Password))
             {
                 MessageBox.Show("Sucsess");
             }

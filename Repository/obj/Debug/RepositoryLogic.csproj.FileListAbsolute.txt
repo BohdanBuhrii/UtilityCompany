@@ -1,0 +1,11 @@
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\Repository\bin\Debug\Repository.dll
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\Repository\bin\Debug\Repository.pdb
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\Repository\bin\Debug\DataModels.dll
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\Repository\bin\Debug\Helper.dll
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\Repository\bin\Debug\DataModels.pdb
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\Repository\bin\Debug\Helper.pdb
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\Repository\obj\Debug\RepositoryLogic.csprojAssemblyReference.cache
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\Repository\obj\Debug\RepositoryLogic.csproj.CoreCompileInputs.cache
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\Repository\obj\Debug\RepositoryLogic.csproj.CopyComplete
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\Repository\obj\Debug\Repository.dll
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\Repository\obj\Debug\Repository.pdb

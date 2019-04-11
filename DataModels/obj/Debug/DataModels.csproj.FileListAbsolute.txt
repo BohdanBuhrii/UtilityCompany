@@ -1,0 +1,9 @@
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\DataModels\bin\Debug\DataModels.dll
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\DataModels\bin\Debug\DataModels.pdb
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\DataModels\bin\Debug\Helper.dll
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\DataModels\bin\Debug\Helper.pdb
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\DataModels\obj\Debug\DataModels.csprojAssemblyReference.cache
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\DataModels\obj\Debug\DataModels.csproj.CoreCompileInputs.cache
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\DataModels\obj\Debug\DataModels.csproj.CopyComplete
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\DataModels\obj\Debug\DataModels.dll
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\DataModels\obj\Debug\DataModels.pdb
