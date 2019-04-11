@@ -7,7 +7,7 @@ using Helper;
 
 namespace Repository.ConcreteTablesLogic
 {
-    class MetersRepo : ConnectionManager
+    public class MetersRepo : ConnectionManager
     {
         /*
         meter_id bigserial,

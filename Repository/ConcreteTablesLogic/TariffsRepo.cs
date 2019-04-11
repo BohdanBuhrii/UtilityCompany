@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Data.Common;
+using DataModels;
 using Helper;
 
 namespace Repository.ConcreteTablesLogic
 {
-    class TariffsRepo : ConnectionManager
+    public class TariffsRepo : ConnectionManager
     {
         /*
         kind_of_services char (20) PRIMARY KEY,
@@ -32,27 +33,9 @@ namespace Repository.ConcreteTablesLogic
         }
 
 
-        public struct ServiceInfo
+        public Service GetServiceInfo(string kind_of_services)
         {
-            public string kind_of_services;
-            public decimal service_fee;
-            public string unit_of_measurement;
-            public decimal subscription_fee;
-            public int period_of_payment_month;
-
-            public override string ToString()
-            {
-                return string.Format(
-                "kind_of_services: {0}\nservice_fee: {1}\nunit_of_measurement: {2}\nsubscription_fee: {3}\nperiod_of_payment_month: {4}",
-                kind_of_services, service_fee, unit_of_measurement, subscription_fee, period_of_payment_month);
-            }
-
-        }
-
-
-        public ServiceInfo GetServiceInfo(string kind_of_services)
-        {
-            ServiceInfo serviceInfo = new ServiceInfo();
+            Service serviceInfo = new Service();
 
             DbDataReader reader = ExecuteReader(string.Format(
                 "SELECT kind_of_services, service_fee, unit_of_measurement, subscription_fee, period_of_payment_month " +

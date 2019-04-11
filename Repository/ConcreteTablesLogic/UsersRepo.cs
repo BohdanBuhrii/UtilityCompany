@@ -4,11 +4,12 @@ using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataModels;
 using Helper;
 
 namespace Repository.ConcreteTablesLogic
 {
-    class UsersRepo : ConnectionManager //todo
+    public class UsersRepo : ConnectionManager //todo
     {
         /*
         user_id bigserial PRIMARY KEY
@@ -23,23 +24,7 @@ namespace Repository.ConcreteTablesLogic
 
         public UsersRepo() : base() { }
 
-        public struct UserInfo
-        {
-            public long user_id;
-            public string user_name;
-            public string email;
-            public string hash_password;
-            public bool is_employee;
-            public string access_level;
-
-            public override string ToString()
-            {
-                return string.Format(
-                    "user_id: {0}\nuser_name: {1}\nemail: {2}\nhash_password: {3}\nis_employee: {4}\naccess_level: {5}",
-                    user_id, user_name, email, hash_password, is_employee, access_level);
-            }
-        }
-
+        
         public override List<object> GetKeys()
         {
             List<object> result = new List<object>();
@@ -56,9 +41,9 @@ namespace Repository.ConcreteTablesLogic
         }
 
 
-        public UserInfo GetUserInfo(long user_id)
+        public User GetUserInfo(long user_id)
         {
-            UserInfo userInfo = new UserInfo();
+            User userInfo = new User();
 
             DbDataReader reader = ExecuteReader(string.Format(
                 "SELECT user_id, user_name, email, hash_password, is_employee, access_level " +
