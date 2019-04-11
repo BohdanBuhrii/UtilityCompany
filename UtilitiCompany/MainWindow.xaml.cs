@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using UtilitiCompany.Pages;
+using Migration;
 
 namespace UtilitiCompany
 {
@@ -24,6 +25,7 @@ namespace UtilitiCompany
         public MainWindow()
         {
             InitializeComponent();
+            MigrationManager.Migrate();
             var child = new Authentication();
             this.AddChild(child);
         }

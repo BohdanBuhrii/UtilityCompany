@@ -135,3 +135,5 @@ D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\obj\Debug
 D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\obj\Debug\UtilitiCompany.csproj.CopyComplete
 D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\obj\Debug\UtilitiCompany.exe
 D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\obj\Debug\UtilitiCompany.pdb
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\bin\Debug\Migration.dll
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\bin\Debug\Migration.pdb

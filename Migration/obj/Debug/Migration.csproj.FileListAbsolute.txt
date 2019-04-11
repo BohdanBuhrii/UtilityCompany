@@ -1,0 +1,13 @@
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\Migration\bin\Debug\Migration.dll
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\Migration\bin\Debug\Migration.pdb
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\Migration\bin\Debug\Helper.dll
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\Migration\bin\Debug\Repository.dll
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\Migration\bin\Debug\DataModels.dll
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\Migration\bin\Debug\Helper.pdb
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\Migration\bin\Debug\Repository.pdb
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\Migration\bin\Debug\DataModels.pdb
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\Migration\obj\Debug\Migration.csprojAssemblyReference.cache
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\Migration\obj\Debug\Migration.csproj.CoreCompileInputs.cache
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\Migration\obj\Debug\Migration.csproj.CopyComplete
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\Migration\obj\Debug\Migration.dll
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\Migration\obj\Debug\Migration.pdb

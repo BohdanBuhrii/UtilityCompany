@@ -137,6 +137,10 @@
       <Project>{bb017fab-d17c-4a2b-aee6-6d56a4b9cfe6}</Project>
       <Name>Helper</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Migration\Migration.csproj">
+      <Project>{b8fb3d36-9b05-43ef-8a2a-8c4712602b34}</Project>
+      <Name>Migration</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Repository\Repository.csproj">
       <Project>{655ee726-c0d6-482d-be1c-dfa61f00aa8d}</Project>
       <Name>Repository</Name>

@@ -9,20 +9,52 @@ using System.IO;
 
 namespace Migration
 {
-    static class MigrationManager
+    public static class MigrationManager
     {
         static readonly int version = 1;
 
-
-        static void Migrate()
+        /*
+        static MigrationManager()
+        {
+            Migrate();
+        }*/
+        static void CreateTables()
         {
             using (ConnectionManager connection = new ConnectionManager())
             {
+                List<object> tables = connection.GetKeys();
+                string[] scripts = Directory.GetFiles(
+                    @"D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\Migration\Scripts\CreateTable");
+
+                bool exist;
+                foreach (string script in scripts)
+                {
+                    exist = false;
+
+                    foreach (object table in tables)
+                    {
+                        if (script.Contains((string)table)) exist = true;
+                    }
+
+                    if (!exist) connection.ExecuteNonQuery(File.ReadAllText(script)); 
+                }
+            }
+        }
+
+        public static void Migrate()
+        {
+            using (ConnectionManager connection = new ConnectionManager())
+            {
+                CreateTables();
+
                 int dbVersion = (int)connection.ExecuteScalar("SELECT current_version FROM version");
 
-                if (version > dbVersion)
+                //Directory.GetFiles(@"D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\Migration\Scripts");
+
+                for (int v = dbVersion + 1; v <= version; v++)
                 {
-                    //todo  connection.ExecuteNonQuery(File.ReadAllText(...
+                    connection.ExecuteNonQuery(File.ReadAllText(string.Format(
+                        @"D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\Migration\Scripts\{0}.sql",v)));
                 }
             }
         }

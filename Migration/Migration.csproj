@@ -55,7 +55,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Scripts\1.0.txt" />
+    <Content Include="Scripts\1.sql" />
     <Content Include="Scripts\CreateTables\tariffs.sql" />
     <Content Include="Scripts\CreateTables\users.sql" />
     <Content Include="Scripts\CreateTables\version.sql" />
