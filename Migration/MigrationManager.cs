@@ -8,6 +8,8 @@ namespace Migration
 {
     static class MigrationManager
     {
+        static readonly string version = "1.0";
+
         static void Migrate()
         {
 
