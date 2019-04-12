@@ -24,7 +24,7 @@ namespace Migration
             {
                 List<object> tables = connection.GetKeys();
                 string[] scripts = Directory.GetFiles(
-                    @"D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\Migration\Scripts\CreateTables");
+                    @"..\..\..\Migration\Scripts\CreateTables");
 
                 bool exist;
                 foreach (string script in scripts)
