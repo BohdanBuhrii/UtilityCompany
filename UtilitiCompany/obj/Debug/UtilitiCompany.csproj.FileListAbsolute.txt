@@ -137,3 +137,9 @@ D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\obj\Debug
 D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\obj\Debug\UtilitiCompany.pdb
 D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\bin\Debug\Migration.dll
 D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\bin\Debug\Migration.pdb
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\obj\Debug\Pages\CreateAccount.g.cs
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\obj\Debug\Pages\CreateAccount.baml
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\obj\Debug\App.baml
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\obj\Debug\Style\ButtonStyles.baml
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\obj\Debug\Style\Colors.baml
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\obj\Debug\Style\Text.baml

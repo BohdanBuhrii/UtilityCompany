@@ -6,5 +6,11 @@
         xmlns:local="clr-namespace:UtilitiCompany"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+        <!--<Grid>
+        <Frame Source="D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\Pages\Authentication.xaml"></Frame>
+        </Grid>-->
+        <Grid Name="MainGrid">
 
+        </Grid>
+    
 </Window>

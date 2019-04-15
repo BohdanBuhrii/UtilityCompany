@@ -20,7 +20,7 @@ namespace UtilitiCompany.Pages
     /// <summary>
     /// Interaction logic for Authentication.xaml
     /// </summary>
-    public partial class Authentication : Page
+    public partial class Authentication : UserControl
     {
         public Authentication()
         {
@@ -40,6 +40,7 @@ namespace UtilitiCompany.Pages
             else if (hash_password == HashHelper.GetHashStringSHA256(UserPasswordBox.Password))
             {
                 MessageBox.Show("Sucsess");
+                
             }
             else
             {
@@ -48,6 +49,14 @@ namespace UtilitiCompany.Pages
             //PasswordTB.Text;
 
 
+        }
+
+        private void NoAccountBtn_Click(object sender, RoutedEventArgs e)
+        {
+            //this.GetUIParentCore().SetCurrentValue(,new CreateAccount());
+            
+            MainGrid.Children.Clear();
+            MainGrid.Children.Add(new CreateAccount());
         }
     }
 }

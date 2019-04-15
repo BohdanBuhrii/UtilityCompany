@@ -12,24 +12,27 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using UtilitiCompany.Pages;
-using Migration;
 
-namespace UtilitiCompany
+namespace UtilitiCompany.Pages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for CreateAccount.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CreateAccount : UserControl
     {
-        public MainWindow()
+        public CreateAccount()
         {
             InitializeComponent();
-            MigrationManager.Migrate();
-            var child = new Authentication();
+        }
 
-            MainGrid.Children.Add(child);
-            
+        private void UserNameTB_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
