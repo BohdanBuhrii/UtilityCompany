@@ -28,5 +28,10 @@ namespace DataModels
                 kind_of_services, StringHelper.ToString(service_fee), unit_of_measurement,
                 StringHelper.ToString(subscription_fee), period_of_payment_month.ToString()};
         }
+
+        public string GetTable()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

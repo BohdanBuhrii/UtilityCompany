@@ -28,5 +28,10 @@ namespace DataModels
                 meter_id.ToString(), kind_of_services, StringHelper.ToString(last_paid_readings),
                 StringHelper.ToString(current_readings), last_check_date };
         }
+
+        public string GetTable()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

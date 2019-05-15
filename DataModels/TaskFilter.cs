@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataModels
 {
-    public interface IInformable
+    class TaskFilter
     {
-        string GetTable();
-        string[] GetFieldsValue();
-        string[] GetFieldsName();
     }
 }

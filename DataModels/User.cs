@@ -28,5 +28,10 @@ namespace DataModels
                 user_id.ToString(), user_name, email, hash_password,
                 is_employee.ToString(), access_level};
         }
+
+        public string GetTable()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
