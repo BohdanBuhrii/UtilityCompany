@@ -121,12 +121,10 @@ D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\bin\Debug
 D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\bin\Debug\System.ValueTuple.xml
 D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\obj\Debug\UtilitiCompany.csprojAssemblyReference.cache
 D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\obj\Debug\UtilitiCompany.exe.config
-D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\obj\Debug\MainWindow.g.cs
 D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\obj\Debug\Pages\Authentication.g.cs
 D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\obj\Debug\App.g.cs
 D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\obj\Debug\UtilitiCompany_MarkupCompile.cache
 D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\obj\Debug\UtilitiCompany_MarkupCompile.lref
-D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\obj\Debug\MainWindow.baml
 D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\obj\Debug\Pages\Authentication.baml
 D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\obj\Debug\UtilitiCompany.g.resources
 D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\obj\Debug\UtilitiCompany.Properties.Resources.resources
@@ -143,3 +141,9 @@ D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\obj\Debug
 D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\obj\Debug\Style\ButtonStyles.baml
 D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\obj\Debug\Style\Colors.baml
 D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\obj\Debug\Style\Text.baml
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\obj\Debug\Pages\MainPage.g.cs
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\obj\Debug\Pages\MainPage.baml
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\obj\Debug\Pages\AccountCreated.g.cs
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\obj\Debug\Pages\AccountCreated.baml
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\obj\Debug\StartWindow.g.cs
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\obj\Debug\StartWindow.baml

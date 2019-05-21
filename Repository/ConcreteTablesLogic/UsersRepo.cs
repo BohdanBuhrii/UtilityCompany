@@ -82,5 +82,10 @@ namespace Repository.ConcreteTablesLogic
                 user_id));
         }
 
+        public bool EmailExist(string email)
+        {
+            if (ExecuteScalar(string.Format("SELECT user_id FROM users WHERE email='{0}'", email)) == null) return false;
+            else return true;
+        }
     }
 }

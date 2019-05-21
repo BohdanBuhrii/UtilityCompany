@@ -14,7 +14,7 @@ namespace DataModels
         public string realty_type;
         //string[] available_services;
         public string[] available_meters;
-        public string[] ownership;
+        public string ownership;
         public long owner_id;
         public long status;
 

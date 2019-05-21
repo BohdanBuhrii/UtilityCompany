@@ -24,8 +24,9 @@ namespace UtilitiCompany
     {
         public MainWindow()
         {
-            InitializeComponent();
             MigrationManager.Migrate();
+            InitializeComponent();
+            
             var child = new Authentication();
 
             MainGrid.Children.Add(child);
