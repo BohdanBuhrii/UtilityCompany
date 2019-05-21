@@ -7,32 +7,54 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" Width="338.158">
 
-    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
-        <TextBox x:Name="UserNameTB" Text="User Name" VerticalContentAlignment="Center" 
-                 HorizontalAlignment="Left" Height="27" Margin="0,115,0,0" TextWrapping="Wrap" 
-                 VerticalAlignment="Top" Width="293" TextChanged="UserNameTB_TextChanged"/>
+    <Grid Name="MainGrid">
+    <Grid  HorizontalAlignment="Center" VerticalAlignment="Center"
+          Height="256" Width="298"  >
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="UserNameTB" VerticalContentAlignment="Center" Grid.Row="0"
+                 HorizontalAlignment="Center" Height="27" TextWrapping="Wrap" 
+                 VerticalAlignment="Bottom" Width="293" TextChanged="UserNameTB_TextChanged"/>
 
-        <TextBox x:Name="EmailTB" Text="Email" VerticalContentAlignment="Center"
-                 HorizontalAlignment="Left" Height="27" Margin="0,175,0,0" TextWrapping="Wrap"
-                 VerticalAlignment="Top" Width="293"/>
+        <TextBox x:Name="EmailTB" VerticalContentAlignment="Center" Grid.Row="1"
+                 HorizontalAlignment="Center" Height="27" TextWrapping="Wrap"
+                 VerticalAlignment="Bottom" Width="293" TextChanged="EmailTB_TextChanged"/>
 
         <PasswordBox x:Name="UserPasswordBox"  VerticalContentAlignment="Center"  
-                     HorizontalAlignment="Left" Height="27" Margin="0,234,0,0" 
-                     VerticalAlignment="Top" Width="293"/>
+                     HorizontalAlignment="Center" Height="27" Grid.Row="2" 
+                     VerticalAlignment="Bottom" Width="293"/>
 
         <PasswordBox x:Name="UserPasswordBox_Copy" VerticalContentAlignment="Center"
-                     HorizontalAlignment="Left" Height="27" Margin="0,290,0,0" 
-                     VerticalAlignment="Top" Width="293"/>
+                     HorizontalAlignment="Center" Height="27" Grid.Row="3" 
+                     VerticalAlignment="Bottom" Width="293"/>
 
-        <Label Content="Confirm Password" HorizontalAlignment="Left" Height="27" Margin="0,290,0,0" 
-               VerticalAlignment="Top" Width="120" RenderTransformOrigin="2.064,0.478"/>
+        <Button Name="CreateAccountBtn" Content="Create Account" HorizontalAlignment="Center" Height="31" Grid.Row="4" 
+                Style="{StaticResource StandartButton}" VerticalAlignment="Bottom" Width="293" Click="Button_Click"/>
 
-        <Label Content="Password" HorizontalAlignment="Left" Height="27" Margin="0,234,0,0" 
-               VerticalAlignment="Top" Width="120" RenderTransformOrigin="2.064,0.478"/>
+        <Label Name="UserNameLbl" Content="UserName" HorizontalAlignment="Left" Height="26"
+               VerticalAlignment="Top" Width="72" RenderTransformOrigin="-0.076,2.611"
+               Grid.Row="0"/>
 
-        <Button Content="Create Account" HorizontalAlignment="Left" Height="31" Margin="0,352,0,0" 
-                Style="{StaticResource StandartButton}" VerticalAlignment="Top" Width="293" Click="Button_Click"/>
+        <Label Name="EmailLbl" Content="Email" HorizontalAlignment="Left" Height="23" 
+               VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.339,3.115"
+               Grid.Row="1"/>
+        
+        <Label Name="PasswordLbl" Content="Password" HorizontalAlignment="Left" Height="27" 
+               VerticalAlignment="Top" Width="120" RenderTransformOrigin="2.064,0.478"
+               Grid.Row="2"/>
+
+
+        <Label Name="ConfirmPasswordLbl" Content="Confirm Password" HorizontalAlignment="Left" Height="27"
+               VerticalAlignment="Top" Width="120" RenderTransformOrigin="2.064,0.478"
+               Grid.Row="3"/>
+
+        
 
     </Grid>
-
+    </Grid>
 </UserControl>

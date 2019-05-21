@@ -7,35 +7,42 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" Width="642.669">
     <Grid Name="MainGrid">
-    <Grid Name="AuthenticationGrid" HorizontalAlignment="Center" VerticalAlignment="Center" Height="398" Margin="176,27,172,25" Width="295">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="44*"/>
-            <RowDefinition Height="155*"/>
-        </Grid.RowDefinitions>
+        <Grid Name="AuthenticationGrid" HorizontalAlignment="Center" VerticalAlignment="Center" Height="300">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="110*"></RowDefinition>
+                <RowDefinition Height="55*"></RowDefinition>
+                <RowDefinition Height="54*"></RowDefinition>
+                <RowDefinition Height="80*"></RowDefinition>
+            </Grid.RowDefinitions>
 
-        <TextBox Name="EmailTB" VerticalContentAlignment="Center" HorizontalAlignment="Left" 
-                 Height="27" Margin="0,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="293" Grid.Row="1"/>
-
-        <Button Name="NoAccountBtn" Content="No have account?" HorizontalAlignment="Left"
-                Height="34" Margin="0,178,0,0" VerticalAlignment="Top" Width="131"
-                Style="{StaticResource StandartButton}" Click="NoAccountBtn_Click" Grid.Row="1"
-                FontWeight="DemiBold" FontSize="15"/>
-
-        <Button Name="LogInBtn" Content="Log in" HorizontalAlignment="Left" 
-                Height="34" Margin="158,178,0,0" VerticalAlignment="Top" Width="135"
-                Style="{StaticResource StandartButton}" Click="LogInBtn_Click" Grid.Row="1"
-                FontWeight="DemiBold" FontSize="15"/>
-
-        <PasswordBox Name="UserPasswordBox" VerticalContentAlignment="Center"  HorizontalAlignment="Left"
-                     Height="27" Margin="0,110,0,0" VerticalAlignment="Top" Width="293" Grid.Row="1"/>
-
-        <Label Content="Email" HorizontalAlignment="Left" Height="27" Margin="-81,2,0,0" 
-               VerticalAlignment="Top" Width="68"/>
-
-        <Label Content="GEnergy" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
-               HorizontalAlignment="Left" Height="78" Margin="10,10,0,0" VerticalAlignment="Top" Width="273"
+            <Label Content="GEnergy" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+               HorizontalAlignment="Center" VerticalAlignment="Center" Height="78" Width="273" Grid.Row="0"
                FontSize="45" Foreground="{StaticResource MainDarkColorBrush}"/>
 
-    </Grid>
+            <Label Content="Email" HorizontalAlignment="Left" Height="27"  
+               VerticalAlignment="Top" Width="68" Grid.Row="1"/>
+
+            <TextBox Name="EmailTB" VerticalContentAlignment="Center" HorizontalAlignment="Center" 
+                 Height="27"  TextWrapping="Wrap" VerticalAlignment="Bottom" Width="293"
+                 Grid.Row="1"/>
+
+            <Label Content="Password" HorizontalAlignment="Left" Height="27"  
+               VerticalAlignment="Top" Width="68" Grid.Row="2"/>
+
+            <PasswordBox Name="UserPasswordBox" VerticalContentAlignment="Center"  HorizontalAlignment="Center"
+                     Height="27" VerticalAlignment="Bottom" Width="293" Grid.Row="2"/>
+
+            <Button Name="NoAccountBtn" Content="No have account?" HorizontalAlignment="Right"
+                Height="34" VerticalAlignment="Center" Width="131"
+                Style="{StaticResource StandartButton}" Click="NoAccountBtn_Click" Grid.Row="3"
+                FontWeight="DemiBold" FontSize="15"/>
+
+            <Button Name="LogInBtn" Content="Log in" HorizontalAlignment="Left" 
+                Height="34" VerticalAlignment="Center" Width="135"
+                Style="{StaticResource StandartButton}" Click="LogInBtn_Click" Grid.Row="3"
+                FontWeight="DemiBold" FontSize="15"/>
+
+
+        </Grid>
     </Grid>
 </UserControl>

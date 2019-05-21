@@ -29,25 +29,26 @@ namespace UtilitiCompany.Pages
 
         private void LogInBtn_Click(object sender, RoutedEventArgs e)
         {
-            UsersRepo users = new UsersRepo();
-            string hash_password = (string)users.ExecuteScalar(
-                string.Format("SELECT hash_password FROM users WHERE email = '{0}'",
-                EmailTB.Text));
-            if (hash_password == "")
+            using (UsersRepo users = new UsersRepo())
             {
-                MessageBox.Show("User not found");
-            }
-            else if (hash_password == HashHelper.GetHashStringSHA256(UserPasswordBox.Password))
-            {
-                MessageBox.Show("Sucsess");
-                
-            }
-            else
-            {
-                MessageBox.Show("Uncorent password");
-            }
-            //PasswordTB.Text;
+                string hash_password = (string)users.ExecuteScalar(
+                    string.Format("SELECT hash_password FROM users WHERE email = '{0}'",
+                    EmailTB.Text));
+                if (hash_password == "")
+                {
+                    MessageBox.Show("User not found");
+                }
+                else if (hash_password == HashHelper.GetHashStringSHA256(UserPasswordBox.Password))
+                {
+                    MessageBox.Show("Sucsess");
 
+                }
+                else
+                {
+                    MessageBox.Show("Uncorent password");
+                }
+                //PasswordTB.Text;
+            }
 
         }
 
