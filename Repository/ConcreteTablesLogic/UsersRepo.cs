@@ -41,7 +41,7 @@ namespace Repository.ConcreteTablesLogic
         }
 
 
-        public User GetUserInfo(long user_id)
+        public User GetUserByID(long user_id)
         {
             User userInfo = new User();
 
@@ -64,6 +64,12 @@ namespace Repository.ConcreteTablesLogic
             RefreshDataReader();
 
             return userInfo;
+        }
+
+        public User GetUserByEmail(string email)
+        {
+            return GetUserByID((long)ExecuteScalar(string.Format(
+                "SELECT user_id FROM users WHERE email='{0}'",email)));
         }
 
         public void AddUser(string user_name, string email, string password, bool is_employee = false, string access_level = "guest")
