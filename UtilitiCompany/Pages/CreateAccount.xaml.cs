@@ -29,12 +29,12 @@ namespace UtilitiCompany.Pages
 
         private void UserNameTB_TextChanged(object sender, TextChangedEventArgs e)
         {
-            UserNameLbl.Visibility = Visibility.Collapsed;
+            //UserNameLbl.Visibility = Visibility.Collapsed;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //User user = new User { user_name = UserNameTB.Text, email=EmailTB.Text, hash_password=UserPasswordBox. };
+            
             
             using (UsersRepo usersRepo = new UsersRepo())
             {
@@ -52,7 +52,7 @@ namespace UtilitiCompany.Pages
 
         private void EmailTB_TextChanged(object sender, TextChangedEventArgs e)
         {
-            EmailLbl.Visibility = Visibility.Collapsed;
+            //EmailLbl.Visibility = Visibility.Collapsed;
         }
     }
 }

@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:UtilitiCompany.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" Width="338.158">
+      d:DesignHeight="450" Width="800">
 
     <Grid Name="MainGrid">
     <Grid  HorizontalAlignment="Center" VerticalAlignment="Center"

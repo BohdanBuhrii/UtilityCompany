@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Repository.ConcreteTablesLogic;
 using Helper;
+using DataModels;
 
 namespace UtilitiCompany.Pages
 {
@@ -31,23 +32,30 @@ namespace UtilitiCompany.Pages
         {
             using (UsersRepo users = new UsersRepo())
             {
-                string hash_password = (string)users.ExecuteScalar(
-                    string.Format("SELECT hash_password FROM users WHERE email = '{0}'",
-                    EmailTB.Text));
-                if (hash_password == "")
+                User user = users.GetUserByEmail(EmailTB.Text);
+
+                if (user.hash_password == "")
                 {
                     MessageBox.Show("User not found");
                 }
-                else if (hash_password == HashHelper.GetHashStringSHA256(UserPasswordBox.Password))
+                else if (user.hash_password == HashHelper.GetHashStringSHA256(UserPasswordBox.Password))
                 {
-                    MessageBox.Show("Sucsess");
-
+                    if (user.access_level == "admin")
+                    {
+                        //todo
+                    }
+                    else
+                    { 
+                        MainGrid.Children.Clear();
+                        MainGrid.Children.Add(new MainPage(user));
+                        //MessageBox.Show("Sucsess");
+                    }
                 }
                 else
                 {
                     MessageBox.Show("Uncorent password");
                 }
-                //PasswordTB.Text;
+                
             }
 
         }

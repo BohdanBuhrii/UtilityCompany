@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,18 @@ namespace UtilitiCompany.Pages
     /// </summary>
     public partial class MainPage : UserControl
     {
-        public MainPage()
+        private User user;
+        public MainPage(User user)
         {
+            this.user = user;
             InitializeComponent();
+            UserNameLbl.Content = user.user_name;
+        }
+
+        private void LogOutBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MainGrid.Children.Clear();
+            MainGrid.Children.Add(new Authentication());
         }
     }
 }
