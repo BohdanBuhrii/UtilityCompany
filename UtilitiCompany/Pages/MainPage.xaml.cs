@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UtilitiCompany.Pages.RealtyControl;
 
 namespace UtilitiCompany.Pages
 {
@@ -27,6 +28,7 @@ namespace UtilitiCompany.Pages
             this.user = user;
             InitializeComponent();
             UserNameLbl.Content = user.user_name;
+            RealtyGrid.Children.Add(new RealtyPagination(user.user_id));
         }
 
         private void LogOutBtn_Click(object sender, RoutedEventArgs e)

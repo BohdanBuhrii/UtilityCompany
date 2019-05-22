@@ -42,7 +42,9 @@ namespace UtilitiCompany.Pages
                 {
                     if (user.access_level == "admin")
                     {
-                        //todo
+                        //MessageBox.Show("Hello Admin");
+                        MainGrid.Children.Clear();
+                        MainGrid.Children.Add(new AdminControl.AdminControl());
                     }
                     else
                     { 

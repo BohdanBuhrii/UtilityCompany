@@ -27,7 +27,7 @@
                     <ColumnDefinition Width="99*"/>
                 </Grid.ColumnDefinitions>
 
-                <Grid Name="InformGrid" Grid.Column="1">
+                <Grid Name="RealtyGrid" Grid.Column="1">
                     
                 </Grid>
                 

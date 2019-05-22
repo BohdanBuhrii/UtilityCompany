@@ -33,8 +33,8 @@
                HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2"/>
 
         <Button Content="View" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="4"
-                    Height="30" Width="70" Style="{StaticResource StandartButton}"
-                    FontWeight="SemiBold" FontSize="17" Click="ViewBtn_Click"/>
+                    Height="25" Width="60" Style="{StaticResource StandartButton}"
+                    FontWeight="SemiBold" FontSize="15" Click="ViewBtn_Click"/>
         
     </Grid>
 </UserControl>

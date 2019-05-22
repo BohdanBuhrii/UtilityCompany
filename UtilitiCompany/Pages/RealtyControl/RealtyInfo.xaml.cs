@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,14 @@ namespace UtilitiCompany.Pages.RealtyControl
     /// </summary>
     public partial class RealtyInfo : UserControl
     {
-        public RealtyInfo()
+        private Realty realty;
+        public RealtyInfo(Realty realty)
         {
             InitializeComponent();
+            this.realty = realty;
+            AddressLbl.Content = realty.address;
+            DistrictLbl.Content = realty.district;
+            StatusLbl.Content = realty.status; //todo label coloring
         }
 
         private void ViewBtn_Click(object sender, RoutedEventArgs e)

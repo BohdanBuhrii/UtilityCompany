@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="UtilitiCompany.Pages.AdminControl.AdminControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UtilitiCompany.Pages.AdminControl"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             TextElement.FontWeight="Medium"
+             TextElement.FontSize="14"
+             FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
+             d:DesignHeight="450" d:DesignWidth="800"  Foreground="Black" Background="Transparent">
+    <Grid Name="MainGrid">
+        <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0.8}">
+            <Grid x:Name="windowTables">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="353.6"/>
+
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0*"/>
+                    <ColumnDefinition Width="0*"/>
+                    <ColumnDefinition Width="126*"/>
+                    <ColumnDefinition Width="356*"/>
+                    <ColumnDefinition Width="189*"/>
+                    <ColumnDefinition Width="128*"/>
+                </Grid.ColumnDefinitions>
+                <Button Content="Log Out" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Row="0" Grid.Column="5"
+                    Height="30" Width="110" Style="{StaticResource StandartButton}"
+                    FontWeight="SemiBold" FontSize="17" Click="LogOutBtn_Click" Margin="0,7,9,0"/>
+
+                <DataGrid x:Name="grid_tabels" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="375" VerticalAlignment="Top" Width="674" Margin="0,61,0,0" RenderTransformOrigin="0.5,0.5" Background="#FFF0F0F0" CanUserReorderColumns="False" ClipboardCopyMode="None" IsSynchronizedWithCurrentItem="True" Grid.Column="3" IsReadOnly="True" Grid.RowSpan="2" CanUserAddRows="False" >
+                    <DataGrid.BindingGroup>
+                        <BindingGroup/>
+                    </DataGrid.BindingGroup>
+                </DataGrid>
+                <DataGrid x:Name="data_grid_change" Grid.ColumnSpan="3" HorizontalAlignment="Left" CanUserAddRows="False" Height="110" Margin="40.6,27,0,0" VerticalAlignment="Top" Width="600" Visibility="Hidden" AlternationCount="1" FrozenColumnCount="1" Background="White" Grid.Column="3"/>
+                <Grid x:Name="grid_datatable_control"  Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="269" Margin="10,44,0,0" VerticalAlignment="Top" Width="141">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="26*"/>
+                        <ColumnDefinition Width="21*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="button_delete" Style="{StaticResource StandartButton}" Foreground="DimGray" FontSize="10" Content="Delete" HorizontalAlignment="Left" Height="20" Margin="10,115,0,0" VerticalAlignment="Top" Width="91" Grid.ColumnSpan="2" Click="Button_delete_Click" />
+                    <Button x:Name="button_edit" Style="{StaticResource StandartButton}" Foreground="DimGray" FontSize="10" Content="Edit table" HorizontalAlignment="Left" Height="20" Margin="10,90,0,0" VerticalAlignment="Top" Width="91" Click="Button_edit_Click" Grid.ColumnSpan="2"/>
+                    <Button x:Name="button_create_new" Style="{StaticResource StandartButton}" Foreground="DimGray" FontSize="10" Content="Create new" HorizontalAlignment="Left" Height="20" Margin="10,65,0,0" VerticalAlignment="Top" Width="91" Click="Button_create_new_Click" Grid.ColumnSpan="2"/>
+                </Grid>
+                <Grid x:Name="grid_ok_cancel"  HorizontalAlignment="Left" Height="110" VerticalAlignment="Top" Width="158" Margin="31,186,0,0" Grid.Column="2" Grid.ColumnSpan="2" >
+                    <Button x:Name="button_cancel_changes" Style="{StaticResource StandartButton}" Foreground="DimGray" FontSize="10" Content="Cancel" HorizontalAlignment="Right" VerticalAlignment="Top" Width="60" Height="25" Click="Button_cancel_changes_Click" RenderTransformOrigin="2.475,-0.306" Margin="0,60,98,0"/>
+                    <Button x:Name="button_accept_changes" Style="{StaticResource StandartButton}" Foreground="DimGray" FontSize="10" Content="Ok" HorizontalAlignment="Left" Height="25"  VerticalAlignment="Top" Width="60" Click="Button_accept_changes_Click" RenderTransformOrigin="-0.798,0.739" Margin="0,30,0,-10"/>
+                </Grid>
+                <ComboBox x:Name="combobox_choose_table" Background="#ECEB6A" Foreground="DimGray" HorizontalAlignment="Left" Height="26" Margin="0,18,0,0" VerticalAlignment="Top" Width="126" SelectionChanged="ComboBox_SelectionChanged" RenderTransformOrigin="0.63,0.477" Grid.Column="2"/>
+            </Grid>
+        </materialDesign:TransitioningContent>
+    </Grid>
+</UserControl>
+

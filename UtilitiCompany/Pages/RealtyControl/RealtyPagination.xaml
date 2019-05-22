@@ -19,7 +19,7 @@
 
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Width="200" Height="30">
 
-            <Button Content="Next >" HorizontalAlignment="Right" VerticalAlignment="Center"
+            <Button Content="Next >" HorizontalAlignment="Right" VerticalAlignment="Top"
                     Height="30" Width="90" Style="{StaticResource StandartButton}"
                     FontWeight="SemiBold" FontSize="17" Click="NextBtn_Click"/>
 

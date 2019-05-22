@@ -23,13 +23,16 @@ namespace UtilitiCompany.Pages.RealtyControl
     {
         private List<Realty> realties;
         private int currentIndex;
+        private long user_id;
 
-       
+        
 
-        public RealtyPagination()
+        public RealtyPagination(long user_id)
         {
             currentIndex = 1;
+            this.user_id = user_id;
             InitializeComponent();
+            RealtyList.Items.Add(new RealtyInfo(new Realty { address = "test address", district = "test district", status="all good"}));
         }
 
         private void ChangePage()
