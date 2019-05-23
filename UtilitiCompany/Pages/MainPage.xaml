@@ -6,20 +6,30 @@
              xmlns:local="clr-namespace:UtilitiCompany.Pages"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Name="MainGrid">
+    <Grid Name="MainGrid" >
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="16*"></RowDefinition>
                 <RowDefinition Height="209*"></RowDefinition>
             </Grid.RowDefinitions>
-            <Label Name="UserNameLbl" Grid.Row="0" Foreground="{StaticResource MainDarkColorBrush}"
-                   VerticalAlignment="Center"
-                   FontWeight="SemiBold" FontSize="17"/>
-            
-            <Button Content="Log Out" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="0"
-                    Height="30" Width="110" Style="{StaticResource StandartButton}"
-                    FontWeight="SemiBold" FontSize="17" Click="LogOutBtn_Click" Margin="0,0,24,0"/>
-            
+
+            <Grid Grid.Row="0" Background="{StaticResource MainDarkColorBrush}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="154*"></ColumnDefinition>
+                    <ColumnDefinition Width="569*"></ColumnDefinition>
+                    <ColumnDefinition Width="77*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Label Name="UserNameLbl" Foreground="White" VerticalAlignment="Center"
+                    Grid.Column="0"
+                    FontWeight="SemiBold" FontSize="16"/>
+
+                <Button Content="Log Out" HorizontalAlignment="Center" VerticalAlignment="Center"
+                    Height="24" Width="70" Grid.Column="2"
+                    Style="{StaticResource StandartButton}"
+                    FontWeight="SemiBold" FontSize="13" Click="LogOutBtn_Click"/>
+            </Grid>
+
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="24*"/>
@@ -27,12 +37,21 @@
                     <ColumnDefinition Width="99*"/>
                 </Grid.ColumnDefinitions>
 
-                <Grid Name="RealtyGrid" Grid.Column="1">
-                    
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                        <RowDefinition Height="5*"></RowDefinition>
+                    </Grid.RowDefinitions>
                 </Grid>
-                
+
+                <Grid Name="RealtyGrid" Grid.Column="1">
+
+                </Grid>
+
                 <Grid Name="NewsGrid" Grid.Column="2">
-                    
+
                 </Grid>
             </Grid>
         </Grid>

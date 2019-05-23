@@ -26,5 +26,10 @@ namespace UtilitiCompany
             InitializeComponent();
             MainGrid.Children.Add(new MainPage(user));
         }
+
+        private void Window_Expanded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
