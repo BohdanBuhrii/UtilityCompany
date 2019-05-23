@@ -29,7 +29,7 @@ namespace Repository.ConcreteTablesLogic
         {
             List<Realty> result = new List<Realty>();
 
-            DbDataReader reader = ExecuteReader("SELECT * FROM realty");
+            DbDataReader reader = ExecuteReader("SELECT * FROM realty WHERE owner_id="+owner_id.ToString());
             while (reader.Read())
             {
                 result.Add(new Realty {
