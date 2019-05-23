@@ -1,5 +1,10 @@
 ﻿
 FD:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\App.xaml;;
+FD:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\Pages\AdminControl\AdminControl.xaml;;
+FD:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\Pages\MeterControl\MeterInfo.xaml;;
+FD:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\Pages\MeterControl\MetersWindow.xaml;;
+FD:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\Pages\RealtyControl\RealtyInfo.xaml;;
+FD:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\Pages\RealtyControl\RealtyPagination.xaml;;
 FD:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\StartWindow.xaml;;
 FD:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\Pages\AccountCreated.xaml;;
 FD:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\Pages\Authentication.xaml;;
@@ -8,7 +13,5 @@ FD:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\Pages\Ma
 FD:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\Style\ButtonStyles.xaml;;
 FD:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\Style\Colors.xaml;;
 FD:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\Style\Text.xaml;;
-FD:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\Pages\RealtyControl\ConcreteRealtyWindow.xaml;;
-FD:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\Pages\RealtyControl\RealtyInfo.xaml;;
-FD:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\Pages\RealtyControl\RealtyPagination.xaml;;
+FD:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\UtilityWindow.xaml;;
 

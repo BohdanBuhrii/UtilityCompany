@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UtilitiCompany.Pages.MeterControl;
 
 namespace UtilitiCompany.Pages.RealtyControl
 {
@@ -33,7 +34,7 @@ namespace UtilitiCompany.Pages.RealtyControl
 
         private void ViewBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            new MetersWindow(realty);
         }
     }
 }

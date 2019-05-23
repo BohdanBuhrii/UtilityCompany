@@ -1,4 +1,5 @@
 ﻿using DataModels;
+using Repository.ConcreteTablesLogic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,7 +33,16 @@ namespace UtilitiCompany.Pages.RealtyControl
             currentIndex = 1;
             this.user_id = user_id;
             InitializeComponent();
-            RealtyList.Items.Add(new RealtyInfo(new Realty { address = "test address", district = "test district", status="all good"}));
+            //RealtyList.Items.Add(new RealtyInfo(new Realty { address = "test address", district = "test district", status="all good"}));
+            using (RealtyRepo realtyRepo = new RealtyRepo())
+            {
+                var realties = realtyRepo.GetByOwner(user_id);
+                foreach (Realty r in realties)
+                {
+                    if (currentIndex == 2) break;
+                    RealtyList.Items.Add(new RealtyInfo(r));
+                }
+            }
         }
 
         private void ChangePage()

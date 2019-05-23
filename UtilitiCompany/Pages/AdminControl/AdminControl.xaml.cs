@@ -20,6 +20,7 @@ namespace UtilitiCompany.Pages.AdminControl
         private DataTable DataTable;
         private DbDataAdapter DataAdapter;
         DbHelper DbHelper;
+
         public AdminControl()
         {
             DbHelper = new DbHelper();

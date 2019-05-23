@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\App.xaml
-11-2030548839
+14-1702410496
 
-13-870771937
+16339002716
 135-57533556
-Pages\RealtyControl\ConcreteRealtyWindow.xaml;Pages\RealtyControl\RealtyInfo.xaml;Pages\RealtyControl\RealtyPagination.xaml;StartWindow.xaml;Pages\AccountCreated.xaml;Pages\Authentication.xaml;Pages\CreateAccount.xaml;Pages\MainPage.xaml;Style\ButtonStyles.xaml;Style\Colors.xaml;Style\Text.xaml;
+Pages\AdminControl\AdminControl.xaml;Pages\MeterControl\MeterInfo.xaml;Pages\MeterControl\MetersWindow.xaml;Pages\RealtyControl\RealtyInfo.xaml;Pages\RealtyControl\RealtyPagination.xaml;StartWindow.xaml;Pages\AccountCreated.xaml;Pages\Authentication.xaml;Pages\CreateAccount.xaml;Pages\MainPage.xaml;Style\ButtonStyles.xaml;Style\Colors.xaml;Style\Text.xaml;UtilityWindow.xaml;
 
-False
+True
 

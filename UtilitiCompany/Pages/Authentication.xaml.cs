@@ -23,6 +23,7 @@ namespace UtilitiCompany.Pages
     /// </summary>
     public partial class Authentication : UserControl
     {
+        UtilityWindow mainWindow;
         public Authentication()
         {
             InitializeComponent();
@@ -32,32 +33,42 @@ namespace UtilitiCompany.Pages
         {
             using (UsersRepo users = new UsersRepo())
             {
-                User user = users.GetUserByEmail(EmailTB.Text);
-
-                if (user.hash_password == "")
+                if (!users.EmailExist(EmailTB.Text))
                 {
-                    MessageBox.Show("User not found");
-                }
-                else if (user.hash_password == HashHelper.GetHashStringSHA256(UserPasswordBox.Password))
-                {
-                    if (user.access_level == "admin")
-                    {
-                        //MessageBox.Show("Hello Admin");
-                        MainGrid.Children.Clear();
-                        MainGrid.Children.Add(new AdminControl.AdminControl());
-                    }
-                    else
-                    { 
-                        MainGrid.Children.Clear();
-                        MainGrid.Children.Add(new MainPage(user));
-                        //MessageBox.Show("Sucsess");
-                    }
+                    MessageBox.Show("Uncorrect email");
                 }
                 else
                 {
-                    MessageBox.Show("Uncorent password");
+                    User user = users.GetUserByEmail(EmailTB.Text);
+
+                    if (user.hash_password == "")
+                    {
+                        MessageBox.Show("User not found");
+                    }
+                    else if (user.hash_password == HashHelper.GetHashStringSHA256(UserPasswordBox.Password))
+                    {
+                        if (user.access_level == "admin")
+                        {
+                            //MessageBox.Show("Hello Admin");
+                            MainGrid.Children.Clear();
+                            MainGrid.Children.Add(new AdminControl.AdminControl());
+                        }
+                        else
+                        {
+                            MainGrid.Children.Clear();
+                            //MainGrid.Children.Add(new MainPage(user));
+                            mainWindow=new UtilityWindow(user);
+                            Window.GetWindow(this).Close();
+                            mainWindow.ShowDialog();
+                            
+                            //MessageBox.Show("Sucsess");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Uncorent password");
+                    }
                 }
-                
             }
 
         }

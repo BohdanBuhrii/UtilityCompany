@@ -85,7 +85,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Pages\RealtyControl\ConcreteRealtyWindow.xaml">
+    <Compile Include="UtilityWindow.xaml.cs">
+      <DependentUpon>UtilityWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Pages\AdminControl\AdminControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MeterControl\MeterInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MeterControl\MetersWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -105,8 +116,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Pages\RealtyControl\ConcreteRealtyWindow.xaml.cs">
-      <DependentUpon>ConcreteRealtyWindow.xaml</DependentUpon>
+    <Compile Include="Pages\AdminControl\AdminControl.xaml.cs">
+      <DependentUpon>AdminControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MeterControl\MeterInfo.xaml.cs">
+      <DependentUpon>MeterInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MeterControl\MetersWindow.xaml.cs">
+      <DependentUpon>MetersWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\RealtyControl\RealtyInfo.xaml.cs">
       <DependentUpon>RealtyInfo.xaml</DependentUpon>
@@ -143,6 +160,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Style\Text.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UtilityWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -209,7 +230,20 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Images\" />
+    <Folder Include="Pages\Authentication\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RealtyImages\Cityscape.png" />
+    <Resource Include="Images\RealtyImages\Factory.png" />
+    <Resource Include="Images\RealtyImages\Flats.png" />
+    <Resource Include="Images\RealtyImages\Mansion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ServiceImages\ColdWater.png" />
+    <Resource Include="Images\ServiceImages\Electricity.png" />
+    <Resource Include="Images\ServiceImages\Gas.png" />
+    <Resource Include="Images\ServiceImages\Heating.png" />
+    <Resource Include="Images\ServiceImages\HotWater.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

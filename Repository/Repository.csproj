@@ -43,9 +43,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConcreteTablesLogic\MetersRepo.cs" />
+    <Compile Include="ConcreteTablesLogic\RealtyRepo.cs" />
     <Compile Include="ConcreteTablesLogic\TariffsRepo.cs" />
     <Compile Include="ConcreteTablesLogic\UsersRepo.cs" />
     <Compile Include="ConnectionManager.cs" />
+    <Compile Include="DbHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

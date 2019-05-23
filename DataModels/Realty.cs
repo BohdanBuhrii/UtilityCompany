@@ -13,10 +13,10 @@ namespace DataModels
         public string district;
         public string realty_type;
         //string[] available_services;
-        public string[] available_meters;
+        public long[] available_meters;
         public string ownership;
         public long owner_id;
-        public long status;
+        public string status;
 
         public string[] GetFieldsName()
         {

@@ -6,15 +6,15 @@
              xmlns:local="clr-namespace:UtilitiCompany.Pages.RealtyControl"
              mc:Ignorable="d" 
              d:DesignHeight="50">
-    <Grid>
+    <Grid Width="450">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"></ColumnDefinition>
-            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="4*"></ColumnDefinition>
             <ColumnDefinition Width="1*"></ColumnDefinition>
             <ColumnDefinition Width="1*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Image Source="UtilitiCompany/Images/building.png" Grid.Column="0"/>
+        <Image Visibility="Visible" Source="../../Images/building.png" Grid.Column="0"/>
 
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
@@ -32,7 +32,7 @@
         <Label Name="StatusLbl" Content="Status"
                HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2"/>
 
-        <Button Content="View" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="4"
+        <Button Content="View" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="4"
                     Height="25" Width="60" Style="{StaticResource StandartButton}"
                     FontWeight="SemiBold" FontSize="15" Click="ViewBtn_Click"/>
         
