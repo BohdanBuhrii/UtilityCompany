@@ -14,7 +14,8 @@
             <ColumnDefinition Width="2*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Image Visibility="Visible" Source="../../Images/RealtyImages/Mansion.png" Grid.Column="0"/>
+        <Image Name="RealtyImage" Visibility="Visible"  Grid.Column="0"/>
+        <!--Source="../../Images/RealtyImages/Mansion.png"-->
 
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>

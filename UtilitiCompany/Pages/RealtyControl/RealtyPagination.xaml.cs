@@ -36,7 +36,7 @@ namespace UtilitiCompany.Pages.RealtyControl
             //RealtyList.Items.Add(new RealtyInfo(new Realty { address = "test address", district = "test district", status="all good"}));
             using (RealtyRepo realtyRepo = new RealtyRepo())
             {
-                var realties = realtyRepo.GetByOwner(user_id);
+                List<Realty> realties = realtyRepo.GetByOwner(user_id);
                 foreach (Realty r in realties)
                 {
                     if (currentIndex == 2) break;

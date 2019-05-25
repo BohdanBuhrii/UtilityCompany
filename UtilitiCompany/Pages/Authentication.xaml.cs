@@ -35,19 +35,19 @@ namespace UtilitiCompany.Pages
             {
                 if (!users.EmailExist(EmailTB.Text))
                 {
-                    MessageBox.Show("Uncorrect email");
+                    MessageBox.Show("Uncorrect Email");
                 }
                 else
                 {
                     User user = users.GetUserByEmail(EmailTB.Text);
 
-                    if (user.hash_password == "")
+                    if (user.HashPassword == "")
                     {
                         MessageBox.Show("User not found");
                     }
-                    else if (user.hash_password == HashHelper.GetHashStringSHA256(UserPasswordBox.Password))
+                    else if (user.HashPassword == HashHelper.GetHashStringSHA256(UserPasswordBox.Password))
                     {
-                        if (user.access_level == "admin")
+                        if (user.AccessLevel == "admin")
                         {
                             //MessageBox.Show("Hello Admin");
                             MainGrid.Children.Clear();

@@ -233,10 +233,10 @@
     <Folder Include="Pages\Authentication\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\RealtyImages\Cityscape.png" />
-    <Resource Include="Images\RealtyImages\Factory.png" />
-    <Resource Include="Images\RealtyImages\Flats.png" />
-    <Resource Include="Images\RealtyImages\Mansion.png" />
+    <Resource Include="Images\RealtyImages\cityscape.png" />
+    <Resource Include="Images\RealtyImages\factory.png" />
+    <Resource Include="Images\RealtyImages\flat.png" />
+    <Resource Include="Images\RealtyImages\mansion.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\ServiceImages\ColdWater.png" />
@@ -244,6 +244,23 @@
     <Resource Include="Images\ServiceImages\Gas.png" />
     <Resource Include="Images\ServiceImages\Heating.png" />
     <Resource Include="Images\ServiceImages\HotWater.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RealtyImages\unknown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ControlImages\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ControlImages\download.png" />
+    <Resource Include="Images\ControlImages\exit.png" />
+    <Resource Include="Images\ControlImages\mail.png" />
+    <Resource Include="Images\ControlImages\phone.png" />
+    <Resource Include="Images\ControlImages\printer.png" />
+    <Resource Include="Images\ControlImages\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ControlImages\payment.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -39,7 +39,7 @@ namespace UtilitiCompany.Pages
             using (UsersRepo usersRepo = new UsersRepo())
             {
                 if (UserPasswordBox.Password != UserPasswordBox_Copy.Password) MessageBox.Show("Passwords are differnt");
-                else if (usersRepo.EmailExist(EmailTB.Text)) MessageBox.Show("This email used for another user");
+                else if (usersRepo.EmailExist(EmailTB.Text)) MessageBox.Show("This Email used for another user");
                 else
                 {
                     usersRepo.AddUser(UserNameTB.Text, EmailTB.Text, UserPasswordBox.Password);

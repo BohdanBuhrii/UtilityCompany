@@ -42,8 +42,26 @@
                         <RowDefinition Height="1*"></RowDefinition>
                         <RowDefinition Height="1*"></RowDefinition>
                         <RowDefinition Height="1*"></RowDefinition>
-                        <RowDefinition Height="5*"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
                     </Grid.RowDefinitions>
+
+                    <Button Name="HomeBtn" Grid.Row="0" Background="White" BorderThickness="0" Click="HomeBtn_Click">
+                        <Image Source="../Images/ControlImages/home.png"/>
+                    </Button>
+
+                    <Button Name="PaymentBtn" Grid.Row="2" Background="White" BorderThickness="0" Click="PaymentBtn_Click">
+                        <Image Source="../Images/ControlImages/payment.png"/>
+                    </Button>
+
+                    <Button Name="SettingsBtn" Grid.Row="4" Background="White" BorderThickness="0" Click="SettingsBtn_Click">
+                        <Image Source="../Images/ControlImages/settings.png"/>
+                    </Button>
+
                 </Grid>
 
                 <Grid Name="RealtyGrid" Grid.Column="1">

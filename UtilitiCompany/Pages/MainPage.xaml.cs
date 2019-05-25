@@ -27,14 +27,30 @@ namespace UtilitiCompany.Pages
         {
             this.user = user;
             InitializeComponent();
-            UserNameLbl.Content = user.user_name;
-            RealtyGrid.Children.Add(new RealtyPagination(user.user_id));
+            UserNameLbl.Content = user.Name;
+            RealtyGrid.Children.Add(new RealtyPagination(user.Id));
         }
 
         private void LogOutBtn_Click(object sender, RoutedEventArgs e)
         {
             MainGrid.Children.Clear();
             MainGrid.Children.Add(new Authentication());
+        }
+
+        private void HomeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            RealtyGrid.Children.Clear();
+            RealtyGrid.Children.Add(new RealtyPagination(user.Id));
+        }
+
+        private void PaymentBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SettingsBtn_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

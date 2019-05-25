@@ -23,13 +23,39 @@ namespace UtilitiCompany.Pages.RealtyControl
     public partial class RealtyInfo : UserControl
     {
         private Realty realty;
+
+        private void ChooseImage()
+        {
+            //System.Windows.Media.ImageSourceConverter("../../Images/RealtyImages/");
+            BitmapImage image = new BitmapImage();
+            image.BeginInit();
+            string[] types = new string[] { "cityscape", "factory", "flat", "mansion" };
+
+            if (types.Contains(realty.Type))
+            {
+                image.UriSource = new Uri(
+                  "pack://application:,,,/AssemblyName;../../Images/RealtyImages/" + realty.Type + ".png");
+            }
+            else
+            {
+                image.UriSource = new Uri(
+                    "pack://application:,,,/AssemblyName;../../Images/RealtyImages/unknown.png");
+            }
+
+
+            image.EndInit();
+            RealtyImage.Source = image;
+        }
+
         public RealtyInfo(Realty realty)
         {
             InitializeComponent();
+
             this.realty = realty;
-            AddressLbl.Content = realty.address;
-            DistrictLbl.Content = realty.district;
-            StatusLbl.Content = realty.status; //todo label coloring
+            AddressLbl.Content = realty.Address;
+            DistrictLbl.Content = realty.District;
+            StatusLbl.Content = realty.Status; //todo label coloring
+            ChooseImage();
         }
 
         private void ViewBtn_Click(object sender, RoutedEventArgs e)

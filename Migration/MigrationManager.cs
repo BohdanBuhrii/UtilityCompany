@@ -13,6 +13,8 @@ namespace Migration
     {
         static readonly int version = 1;
 
+        static readonly string[] migrationPriority = new string[] { "tarrifs", "users", "meters", "realty",  "version" };
+        
         /*
         static MigrationManager()
         {
@@ -23,20 +25,24 @@ namespace Migration
             using (ConnectionManager connection = new ConnectionManager())
             {
                 List<object> tables = connection.GetKeys();
-                string[] scripts = Directory.GetFiles(
-                    @"..\..\..\Migration\Scripts\CreateTables");
+
+                //string[] scripts = Directory.GetFiles(
+                //    @"..\..\..\Migration\Scripts\CreateTables");
+
+                
 
                 bool exist;
-                foreach (string script in scripts)
+                foreach (string script in migrationPriority)
                 {
                     exist = false;
 
-                    foreach (object table in tables)
+                    foreach (string table in tables)
                     {
                         if (script.Contains((string)table)) exist = true;
                     }
 
-                    if (!exist) connection.ExecuteNonQuery(File.ReadAllText(script)); 
+                    if (!exist) connection.ExecuteNonQuery(File.ReadAllText(
+                        @"..\..\..\Migration\Scripts\CreateTables\"+script+".sql")); 
                 }
             }
         }
