@@ -8,11 +8,11 @@ namespace Repository.ConcreteTablesLogic
     public class TariffsRepo : ConnectionManager
     {
         /*
-        kind_of_services char (20) PRIMARY KEY,
-        service_fee money,
-        unit_of_measurement char (10),
-        subscription_fee money,
-        period_of_payment_month int
+        KindOfServices char (20) PRIMARY KEY,
+        ServiceFee money,
+        UnitOfMeasurement char (10),
+        SubscriptionFee money,
+        PeriodOfPaymentMonth int
         */
         public TariffsRepo() : base() { }
 
@@ -21,10 +21,10 @@ namespace Repository.ConcreteTablesLogic
         {
             List<object> result = new List<object>();
 
-            DbDataReader reader = ExecuteReader("SELECT kind_of_services FROM tariffs");
+            DbDataReader reader = ExecuteReader("SELECT KindOfServices FROM tariffs");
             while (reader.Read())
             {
-                result.Add(reader["kind_of_services"]);
+                result.Add(reader["KindOfServices"]);
             }
 
             RefreshDataReader();
@@ -33,22 +33,22 @@ namespace Repository.ConcreteTablesLogic
         }
 
 
-        public Service GetServiceInfo(string kind_of_services)
+        public Service GetServiceInfo(string kindOfServices)
         {
             Service serviceInfo = new Service();
 
             DbDataReader reader = ExecuteReader(string.Format(
-                "SELECT kind_of_services, service_fee, unit_of_measurement, subscription_fee, period_of_payment_month " +
-                "FROM tariffs WHERE kind_of_services = '{0}'",
-                kind_of_services));
+                "SELECT KindOfServices, ServiceFee, UnitOfMeasurement, SubscriptionFee, PeriodOfPaymentMonth " +
+                "FROM tariffs WHERE KindOfServices = '{0}'",
+                kindOfServices));
 
             if (reader.Read())
             {
-                serviceInfo.kind_of_services = (string)reader["kind_of_services"];
-                serviceInfo.service_fee = (decimal)reader["service_fee"];
-                serviceInfo.unit_of_measurement = (string)reader["unit_of_measurement"];
-                serviceInfo.subscription_fee = (decimal)reader["subscription_fee"];
-                serviceInfo.period_of_payment_month = (int)reader["period_of_payment_month"];
+                serviceInfo.KindOfServices = (string)reader["KindOfServices"];
+                serviceInfo.ServiceFee = (decimal)reader["ServiceFee"];
+                serviceInfo.UnitOfMeasurement = (string)reader["UnitOfMeasurement"];
+                serviceInfo.SubscriptionFee = (decimal)reader["SubscriptionFee"];
+                serviceInfo.PeriodOfPaymentMonth = (int)reader["PeriodOfPaymentMonth"];
             }
 
             RefreshDataReader();
@@ -57,46 +57,46 @@ namespace Repository.ConcreteTablesLogic
         }
 
 
-        public void AddServise(string kind_of_services, decimal service_fee,
-            string unit_of_measurement, decimal subscription_fee, int period_of_payment_month)
+        public void AddServise(string kindOfServices, decimal serviceFee,
+            string unitOfMeasurement, decimal subscriptionFee, int periodOfPaymentMonth)
         {
             ExecuteNonQuery(string.Format(
-                "INSERT INTO tariffs (kind_of_services, service_fee, unit_of_measurement, subscription_fee, period_of_payment_month) " +
+                "INSERT INTO tariffs (KindOfServices, ServiceFee, UnitOfMeasurement, SubscriptionFee, PeriodOfPaymentMonth) " +
                 "VALUES ('{0}',{1},'{2}',{3},{4})",
-                kind_of_services, StringHelper.ToString(service_fee), unit_of_measurement,
-                StringHelper.ToString(subscription_fee), period_of_payment_month));
+                kindOfServices, StringHelper.ToString(serviceFee), unitOfMeasurement,
+                StringHelper.ToString(subscriptionFee), periodOfPaymentMonth));
         }
 
 
-        public void EditServiseFee(string kind_of_services, decimal new_fee)
+        public void EditServiseFee(string kindOfServices, decimal newFee)
         {
             ExecuteNonQuery(string.Format(
-                "UPDATE tariffs SET service_fee = {0} WHERE kind_of_services='{1}'",
-                StringHelper.ToString(new_fee), kind_of_services));
+                "UPDATE tariffs SET ServiceFee = {0} WHERE KindOfServices='{1}'",
+                StringHelper.ToString(newFee), kindOfServices));
         }
 
 
-        public void EditSubscriptionFee(string kind_of_services, decimal new_subscription_fee)
+        public void EditSubscriptionFee(string kindOfServices, decimal newSubscriptionFee)
         {
             ExecuteNonQuery(string.Format(
-                "UPDATE tariffs SET subscription_fee = {0} WHERE kind_of_services='{1}'",
-                StringHelper.ToString(new_subscription_fee), kind_of_services));
+                "UPDATE tariffs SET SubscriptionFee = {0} WHERE KindOfServices='{1}'",
+                StringHelper.ToString(newSubscriptionFee), kindOfServices));
         }
 
 
-        public void EditPeriodOfPayment(string kind_of_services, int new_period_of_payment)
+        public void EditPeriodOfPayment(string kindOfServices, int newPeriodOfPayment)
         {
             ExecuteNonQuery(string.Format(
-                "UPDATE tariffs SET period_of_payment_month = {0} WHERE kind_of_services='{1}'",
-                new_period_of_payment, kind_of_services));
+                "UPDATE tariffs SET PeriodOfPaymentMonth = {0} WHERE KindOfServices='{1}'",
+                newPeriodOfPayment, kindOfServices));
         }
 
 
-        public void DeleteServiceUnsafe(string kind_of_services)
+        public void DeleteServiceUnsafe(string kindOfServices)
         {
             ExecuteNonQuery(string.Format(
-                "DELETE FROM tariffs WHERE kind_of_services = '{0}'",
-                kind_of_services));
+                "DELETE FROM tariffs WHERE KindOfServices = '{0}'",
+                kindOfServices));
         }
 
     }

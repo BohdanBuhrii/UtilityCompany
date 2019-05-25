@@ -8,15 +8,14 @@ namespace DataModels
 {
     public class Realty : IInformable
     {
-        public long realty_id;
-        public string address;
-        public string district;
-        public string realty_type;
-        //string[] available_services;
-        public long[] available_meters;
-        public string ownership;
-        public long owner_id;
-        public string status;
+        public long Id;
+        public string Address;
+        public string District;
+        public string Type;
+        public long[] AvailableMeters;
+        public string Ownership;
+        public long OwnerId;
+        public string Status;
 
         public string[] GetFieldsName()
         {

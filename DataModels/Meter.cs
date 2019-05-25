@@ -9,24 +9,24 @@ namespace DataModels
 {
     public class Meter:IInformable
     {
-        public long meter_id;
-        public string kind_of_services;
-        public decimal last_paid_readings;
-        public decimal current_readings;
-        public string last_check_date;
+        public long Id;
+        public string KindOfServices;
+        public decimal LastPaidReadings;
+        public decimal CurrentReadings;
+        public string LastCheckDate;
 
         public string[] GetFieldsName()
         {
             return new string[] {
-                "meter_id", "kind_of_services", "last_paid_readings",
-                "current_readings", "last_check_date" };
+                "Id", "KindOfServices", "LastPaidReadings",
+                "CurrentReadings", "LastCheckDate" };
         }
 
         public string[] GetFieldsValue()
         {
             return new string[] {
-                meter_id.ToString(), kind_of_services, StringHelper.ToString(last_paid_readings),
-                StringHelper.ToString(current_readings), last_check_date };
+                Id.ToString(), KindOfServices, StringHelper.ToString(LastPaidReadings),
+                StringHelper.ToString(CurrentReadings), LastCheckDate };
         }
 
         public string GetTable()

@@ -9,24 +9,24 @@ namespace DataModels
 {
     public partial class User:IInformable
     {
-        public long user_id;
-        public string user_name;
-        public string email;
-        public string hash_password;
-        public bool is_employee;
-        public string access_level;
+        public long Id;
+        public string Name;
+        public string Email;
+        public string HashPassword;
+        public bool IsEmployee;
+        public string AccessLevel;
 
         public string[] GetFieldsName()
         {
             return new string[] {
-                "user_id", "user_name", "email", "hash_password", "is_employee", "access_level"};
+                "Id", "Name", "Email", "HashPassword", "IsEmployee", "AccessLevel"};
         }
 
         public string[] GetFieldsValue()
         {
             return new string[] {
-                user_id.ToString(), user_name, email, hash_password,
-                is_employee.ToString(), access_level};
+                Id.ToString(), Name, Email, HashPassword,
+                IsEmployee.ToString(), AccessLevel};
         }
 
         public string GetTable()

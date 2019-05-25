@@ -1,6 +1,6 @@
 ﻿CREATE TABLE version
 (
-	current_version integer
+	CurrentVersion integer
 );
 
-INSERT INTO version(current_version) VALUES (0)
+INSERT INTO version(CurrentVersion) VALUES (0)

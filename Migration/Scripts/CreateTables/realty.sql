@@ -1,13 +1,13 @@
 ﻿CREATE TABLE realty
 (
-	realty_id bigserial PRIMARY KEY,
-	address char(100),
-	district char(100),
-	realty_type char(50),
-	available_meters bigint[],
-	ownership char(50),
-	owner_id bigserial REFERENCES users(users_id),
-	status char(30)
+	Id bigserial PRIMARY KEY,
+	Address varchar(100),
+	District varchar(100),
+	Type varchar(50),
+	AvailableMeters bigint[],
+	Ownership varchar(50),
+	OwnerId bigserial REFERENCES users(Id),
+	Status varchar(30)
 
 );
 

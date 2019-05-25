@@ -14,10 +14,10 @@ namespace Repository.ConcreteTablesLogic
         {
             List<object> result = new List<object>();
 
-            DbDataReader reader = ExecuteReader("SELECT realty_id FROM realty");
+            DbDataReader reader = ExecuteReader("SELECT Id FROM realty");
             while (reader.Read())
             {
-                result.Add(reader["realty_id"]);
+                result.Add(reader["Id"]);
             }
 
             RefreshDataReader();
@@ -25,22 +25,22 @@ namespace Repository.ConcreteTablesLogic
             return result;
         }
 
-        public List<Realty> GetByOwner(long owner_id, int? limit=null, int? offset=null)
+        public List<Realty> GetByOwner(long id, int? limit=null, int? offset=null)
         {
             List<Realty> result = new List<Realty>();
 
-            DbDataReader reader = ExecuteReader("SELECT * FROM realty WHERE owner_id="+owner_id.ToString());
+            DbDataReader reader = ExecuteReader("SELECT * FROM realty WHERE Id="+id.ToString());
             while (reader.Read())
             {
                 result.Add(new Realty {
-                    address = (string)reader["address"],
-                    available_meters =(long[])reader["available_meters"],
-                    district =(string)reader["district"],
-                    ownership=(string)reader["ownership"],
-                    owner_id=(long)reader["owner_id"],
-                    realty_id=(long)reader["realty_id"],
-                    realty_type=(string)reader["realty_type"],
-                    status=(string)reader["status"]
+                    Address = (string)reader["Address"],
+                    AvailableMeters =(long[])reader["AvailableMeters"],
+                    District =(string)reader["District"],
+                    Ownership=(string)reader["Ownership"],
+                    OwnerId=(long)reader["OwnerId"],
+                    Id=(long)reader["Id"],
+                    Type=(string)reader["Type"],
+                    Status=(string)reader["Status"]
                 });
             }
 

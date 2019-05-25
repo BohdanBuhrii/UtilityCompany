@@ -12,13 +12,13 @@ namespace Repository.ConcreteTablesLogic
     public class UsersRepo : ConnectionManager //todo
     {
         /*
-        user_id bigserial PRIMARY KEY
-        user_name varchar(100)
-        email varchar(100) PRIMARY KEY
-        hash_password varchar(88)
-        is_employee boolean
+        Id bigserial PRIMARY KEY
+        Name varchar(100)
+        Email varchar(100) PRIMARY KEY
+        HashPassword varchar(88)
+        IsEmployee boolean
         //type (фізична,юридична особа і т. д.)
-        access_level varchar(50)
+        AccessLevel varchar(50)
         */
 
 
@@ -29,10 +29,10 @@ namespace Repository.ConcreteTablesLogic
         {
             List<object> result = new List<object>();
 
-            DbDataReader reader = ExecuteReader("SELECT user_id FROM users");
+            DbDataReader reader = ExecuteReader("SELECT Id FROM users");
             while (reader.Read())
             {
-                result.Add(reader["user_id"]);
+                result.Add(reader["Id"]);
             }
 
             RefreshDataReader();
@@ -41,24 +41,24 @@ namespace Repository.ConcreteTablesLogic
         }
 
 
-        public User GetUserByID(long user_id)
+        public User GetUserByID(long id)
         {
             User userInfo = new User();
 
             DbDataReader reader = ExecuteReader(string.Format(
-                "SELECT user_id, user_name, email, hash_password, is_employee, access_level " +
-                "FROM users WHERE user_id = {0}",
-                user_id));
+                "SELECT Id, Name, Email, HashPassword, IsEmployee, AccessLevel " +
+                "FROM users WHERE Id = {0}",
+                id));
 
 
             if (reader.Read())
             {
-                userInfo.user_id = (long)reader["user_id"];
-                userInfo.user_name = (string)reader["user_name"];
-                userInfo.email = (string)reader["email"];
-                userInfo.hash_password = (string)reader["hash_password"];
-                userInfo.is_employee = (bool)reader["is_employee"];
-                userInfo.access_level = (string)reader["access_level"];
+                userInfo.Id = (long)reader["Id"];
+                userInfo.Name = (string)reader["Name"];
+                userInfo.Email = (string)reader["Email"];
+                userInfo.HashPassword = (string)reader["HashPassword"];
+                userInfo.IsEmployee = (bool)reader["IsEmployee"];
+                userInfo.AccessLevel = (string)reader["AccessLevel"];
             }
 
             RefreshDataReader();
@@ -69,28 +69,28 @@ namespace Repository.ConcreteTablesLogic
         public User GetUserByEmail(string email)
         {
             return GetUserByID((long)ExecuteScalar(string.Format(
-                "SELECT user_id FROM users WHERE email='{0}'",email)));
+                "SELECT Id FROM users WHERE Email='{0}'",email)));
         }
 
-        public void AddUser(string user_name, string email, string password, bool is_employee = false, string access_level = "guest")
+        public void AddUser(string name, string email, string password, bool isEmployee = false, string accessLevel = "guest")
         {
             ExecuteNonQuery(string.Format(
-                "INSERT INTO users (user_name, email, hash_password, is_employee, access_level ) " +
+                "INSERT INTO users (Name, Email, HashPassword, IsEmployee, AccessLevel ) " +
                 "VALUES ('{0}','{1}','{2}',{3},'{4}')",
-                user_name, email, HashHelper.GetHashStringSHA256(password), is_employee, access_level));
+                name, email, HashHelper.GetHashStringSHA256(password), isEmployee, accessLevel));
         }
 
-        public void DeleteUserUnsafe(long user_id)
+        public void DeleteUserUnsafe(long id)
         {
 
             ExecuteNonQuery(string.Format(
-                "DELETE FROM users WHERE user_id = {0}",
-                user_id));
+                "DELETE FROM users WHERE Id = {0}",
+                id));
         }
 
         public bool EmailExist(string email)
         {
-            if (ExecuteScalar(string.Format("SELECT user_id FROM users WHERE email='{0}'", email)) == null) return false;
+            if (ExecuteScalar(string.Format("SELECT Id FROM users WHERE Email='{0}'", email)) == null) return false;
             else return true;
         }
     }
