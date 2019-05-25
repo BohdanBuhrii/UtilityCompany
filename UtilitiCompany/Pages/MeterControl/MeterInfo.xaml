@@ -5,8 +5,42 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:UtilitiCompany.Pages.MeterControl"
              mc:Ignorable="d" 
-             d:DesignHeight="200" d:DesignWidth="200">
+             d:DesignHeight="200" d:DesignWidth="300">
     <Grid>
-        <Image Source="../../Images/ServiceImages/ColdWater.png" Height="100"/>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Image Name="ServiceImage" Source="../../Images/ServiceImages/ColdWater.png" Height="100" Width="100" 
+               HorizontalAlignment="Center" VerticalAlignment="Center"
+               Grid.Row="0" Grid.Column="0"/>
+
+            <Label Name="IdLbl" Content="ID: "
+                   Grid.Column="1"/>
+
+            <Label Name="DateLbl" Content="Last Check: "
+                   Grid.Column="1" VerticalAlignment="Center"/>
+            
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBox Name="ReadingsTb" Grid.Column="0"/>
+
+            <Button Name="ApplyBtn" Content="Apply" Style="{StaticResource StandartButton}"
+                    Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"
+                    Height="25" Width="40" Click="ApplyBtn_Click"/>
+            
+        </Grid>
+
     </Grid>
 </UserControl>
