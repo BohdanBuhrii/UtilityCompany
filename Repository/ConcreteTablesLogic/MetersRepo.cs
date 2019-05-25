@@ -49,7 +49,7 @@ namespace Repository.ConcreteTablesLogic
                 meterInfo.KindOfServices = (string)reader["kindofservices"];
                 meterInfo.LastPaidReadings = (decimal)reader["lastpaidreadings"];
                 meterInfo.CurrentReadings = (decimal)reader["currentreadings"];
-                meterInfo.LastCheckDate = (string)reader["lastcheckdate"];
+                meterInfo.LastCheckDate = (DateTime)reader["lastcheckdate"];
             }
 
             RefreshDataReader();

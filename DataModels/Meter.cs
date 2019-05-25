@@ -13,7 +13,7 @@ namespace DataModels
         public string KindOfServices;
         public decimal LastPaidReadings;
         public decimal CurrentReadings;
-        public string LastCheckDate;
+        public DateTime LastCheckDate;
 
         public string[] GetFieldsName()
         {
@@ -26,7 +26,7 @@ namespace DataModels
         {
             return new string[] {
                 Id.ToString(), KindOfServices, StringHelper.ToString(LastPaidReadings),
-                StringHelper.ToString(CurrentReadings), LastCheckDate };
+                StringHelper.ToString(CurrentReadings), LastCheckDate.ToString() };
         }
 
         public string GetTable()
