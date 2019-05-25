@@ -13,7 +13,7 @@ namespace Migration
     {
         static readonly int version = 1;
 
-        static readonly string[] migrationPriority = new string[] { "tarrifs", "users", "meters", "realty",  "version" };
+        static readonly string[] migrationPriority = new string[] { "tariffs", "users", "meters", "realty",  "version" };
         
         /*
         static MigrationManager()
@@ -53,7 +53,7 @@ namespace Migration
             {
                 CreateTables();
 
-                int dbVersion = (int)connection.ExecuteScalar("SELECT current_version FROM version");
+                int dbVersion = (int)connection.ExecuteScalar("SELECT currentVersion FROM version");
 
                 //Directory.GetFiles(@"D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\Migration\Scripts");
 
