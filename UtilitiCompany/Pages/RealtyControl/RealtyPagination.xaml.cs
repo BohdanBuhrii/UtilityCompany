@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UtilitiCompany.Pages.MeterControl;
 
 namespace UtilitiCompany.Pages.RealtyControl
 {
@@ -24,23 +25,24 @@ namespace UtilitiCompany.Pages.RealtyControl
     {
         private List<Realty> realties;
         private int currentIndex;
-        private long user_id;
+        private long userId;
 
         
 
-        public RealtyPagination(long user_id)
+        public RealtyPagination(long userId)
         {
             currentIndex = 1;
-            this.user_id = user_id;
+            this.userId = userId;
             InitializeComponent();
             //RealtyList.Items.Add(new RealtyInfo(new Realty { address = "test address", district = "test district", status="all good"}));
             using (RealtyRepo realtyRepo = new RealtyRepo())
             {
-                List<Realty> realties = realtyRepo.GetByOwner(user_id);
+                List<Realty> realties = realtyRepo.GetByOwner(userId);
                 foreach (Realty r in realties)
                 {
-                    if (currentIndex == 2) break;
+                    //if (currentIndex == 2) break;
                     RealtyList.Items.Add(new RealtyInfo(r));
+                    
                 }
             }
         }

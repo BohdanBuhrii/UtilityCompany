@@ -163,3 +163,5 @@ D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\obj\Debug
 D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\obj\Debug\Pages\MeterControl\MetersWindow.baml
 D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\obj\Debug\UtilityWindow.g.cs
 D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\obj\Debug\UtilityWindow.baml
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\obj\Debug\Pages\RealtyControl\ExtendedRealtyInfo.g.cs
+D:\USERS\Buhrii_B\C#\Бази даних\UtilityCompany\UtilitiCompany\obj\Debug\Pages\RealtyControl\ExtendedRealtyInfo.baml

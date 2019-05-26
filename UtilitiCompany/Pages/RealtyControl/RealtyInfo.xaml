@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:UtilitiCompany.Pages.RealtyControl"
              mc:Ignorable="d" 
              d:DesignHeight="100">
-    <Grid Height="100">
+    <Grid Height="100" Name="MainGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"></ColumnDefinition>
             <ColumnDefinition Width="10*"></ColumnDefinition>

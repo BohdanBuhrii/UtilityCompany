@@ -24,6 +24,7 @@ namespace UtilitiCompany.Pages.RealtyControl
     {
         private Realty realty;
 
+        private MetersWindow metersWindow;
         private void ChooseImage()
         {
             //System.Windows.Media.ImageSourceConverter("../../Images/RealtyImages/");
@@ -60,7 +61,12 @@ namespace UtilitiCompany.Pages.RealtyControl
 
         private void ViewBtn_Click(object sender, RoutedEventArgs e)
         {
-            new MetersWindow(realty);
+            //MainGrid.Children.Clear();
+            //MainGrid.Children.Add(new ExtendedRealtyInfo(realty));
+            var a = (Grid)((ListBox)this.Parent).Parent;
+            a.Children.Clear();
+            a.Children.Add(new ExtendedRealtyInfo(realty));
+           // metersWindow = new MetersWindow(realty); ////!!!!!!!!!!!!!!!!!
         }
     }
 }

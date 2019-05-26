@@ -85,6 +85,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Pages\RealtyControl\ExtendedRealtyInfo.xaml.cs">
+      <DependentUpon>ExtendedRealtyInfo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UtilityWindow.xaml.cs">
       <DependentUpon>UtilityWindow.xaml</DependentUpon>
     </Compile>
@@ -97,6 +100,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\MeterControl\MetersWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\RealtyControl\ExtendedRealtyInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -239,11 +246,11 @@
     <Resource Include="Images\RealtyImages\mansion.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\ServiceImages\ColdWater.png" />
-    <Resource Include="Images\ServiceImages\Electricity.png" />
-    <Resource Include="Images\ServiceImages\Gas.png" />
-    <Resource Include="Images\ServiceImages\Heating.png" />
-    <Resource Include="Images\ServiceImages\HotWater.png" />
+    <Resource Include="Images\ServiceImages\cold water.png" />
+    <Resource Include="Images\ServiceImages\electricity.png" />
+    <Resource Include="Images\ServiceImages\gas.png" />
+    <Resource Include="Images\ServiceImages\heating.png" />
+    <Resource Include="Images\ServiceImages\hot water.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\RealtyImages\unknown.png" />

@@ -12,24 +12,26 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UtilitiCompany.Pages.MeterControl;
 
-namespace UtilitiCompany.Pages.MeterControl
+namespace UtilitiCompany.Pages.RealtyControl
 {
     /// <summary>
-    /// Interaction logic for MetersWindow.xaml
+    /// Interaction logic for ExtendedRealtyInfo.xaml
     /// </summary>
-    public partial class MetersWindow : Window
+    public partial class ExtendedRealtyInfo : UserControl
     {
         Realty realty;
 
-        public MetersWindow(Realty realty)
+        public ExtendedRealtyInfo(Realty realty)
         {
             this.realty = realty;
             InitializeComponent();
             ChooseImage();
 
-            using (MetersRepo metersRepo = new MetersRepo())
+            using (MetersRepo metersRepo=new MetersRepo())
             {
                 foreach (long meterId in realty.AvailableMeters)
                 {

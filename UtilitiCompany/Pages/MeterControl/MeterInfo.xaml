@@ -34,7 +34,7 @@
                 <ColumnDefinition Width="4*"></ColumnDefinition>
                 <ColumnDefinition Width="1*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <TextBox Name="ReadingsTb" Grid.Column="0"/>
+            <TextBox  Height="20" Name="ReadingsTb" Grid.Column="0"/>
 
             <Button Name="ApplyBtn" Content="Apply" Style="{StaticResource StandartButton}"
                     Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"
