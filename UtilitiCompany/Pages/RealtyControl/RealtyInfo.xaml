@@ -6,11 +6,11 @@
              xmlns:local="clr-namespace:UtilitiCompany.Pages.RealtyControl"
              mc:Ignorable="d" 
              d:DesignHeight="100">
-    <Grid Height="100" Name="MainGrid">
+    <Grid Height="100" Width="800" Name="MainGrid">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"></ColumnDefinition>
-            <ColumnDefinition Width="10*"></ColumnDefinition>
             <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="4*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
             <ColumnDefinition Width="2*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
@@ -33,7 +33,7 @@
         <Label Name="StatusLbl" Content="Status"
                HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2"/>
 
-        <Button Content="View" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="4"
+        <Button Content="View" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="4"
                     Height="25" Width="60" Style="{StaticResource StandartButton}"
                     FontWeight="SemiBold" FontSize="15" Click="ViewBtn_Click"/>
         
