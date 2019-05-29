@@ -23,42 +23,54 @@ namespace UtilitiCompany.Pages.RealtyControl
     /// </summary>
     public partial class RealtyPagination : UserControl
     {
-        private List<Realty> realties;
-        private int currentIndex;
+        private long offset;
+        private long totalNumberOfItems;
         private long userId;
 
-        
 
         public RealtyPagination(long userId)
         {
-            currentIndex = 1;
-            this.userId = userId;
-            InitializeComponent();
-            //RealtyList.Items.Add(new RealtyInfo(new Realty { address = "test address", district = "test district", status="all good"}));
+            offset = 0;
             using (RealtyRepo realtyRepo = new RealtyRepo())
             {
-                List<Realty> realties = realtyRepo.GetByOwner(userId);
+                totalNumberOfItems = (long)realtyRepo.ExecuteScalar("SELECT COUNT(*) FROM realty");
+            }
+            this.userId = userId;
+            InitializeComponent();
+            ReplaseItems(5);
+            
+        }
+
+        private void ReplaseItems(int numberOfItems)
+        {
+            RealtyList.Items.Clear();
+            using (RealtyRepo realtyRepo = new RealtyRepo())
+            {
+                List<Realty> realties = realtyRepo.GetByOwner(userId, numberOfItems, offset);
                 foreach (Realty r in realties)
                 {
-                    //if (currentIndex == 2) break;
                     RealtyList.Items.Add(new RealtyInfo(r));
-                    
                 }
             }
         }
 
-        private void ChangePage()
-        {
-
-        }
+        
         private void BackBtn_Click(object sender, RoutedEventArgs e)
         {
-            ChangePage();
+            offset -= 5;
+            ReplaseItems(5);
+            if (offset == 0) BackBtn.Visibility = Visibility.Collapsed;
+
+            NextBtn.Visibility = Visibility.Visible;
         }
 
         private void NextBtn_Click(object sender, RoutedEventArgs e)
         {
-            ChangePage();
+            offset += 5;
+            ReplaseItems(5);
+            if (offset >= totalNumberOfItems - 5) NextBtn.Visibility = Visibility.Collapsed;
+
+            BackBtn.Visibility = Visibility.Visible;
         }
     }
 }

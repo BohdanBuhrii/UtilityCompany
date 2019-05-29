@@ -19,11 +19,11 @@
 
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Width="200" Height="30">
 
-            <Button Content="Next >" HorizontalAlignment="Right" VerticalAlignment="Top"
+            <Button Name="NextBtn" Content="Next >" HorizontalAlignment="Right" VerticalAlignment="Top"
                     Height="30" Width="90" Style="{StaticResource StandartButton}"
                     FontWeight="SemiBold" FontSize="17" Click="NextBtn_Click"/>
 
-            <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Center"
+            <Button Name="BackBtn"  Content="Back" HorizontalAlignment="Left" VerticalAlignment="Center"
                     Height="30" Width="90" Style="{StaticResource StandartButton}"
                     FontWeight="SemiBold" FontSize="17" Click="BackBtn_Click"/>
 
