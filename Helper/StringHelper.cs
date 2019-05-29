@@ -8,9 +8,14 @@ namespace Helper
 {
     public class StringHelper
     {
-        public static string ToString(object number)
+        public static string ToString(decimal number)
         {
             return number.ToString().Replace(',', '.');
+        }
+
+        public static string ToString(long[] array)
+        {
+            return "'{"+string.Join(", ",array)+"}'";
         }
     }
 }
