@@ -25,11 +25,15 @@ namespace Repository.ConcreteTablesLogic
             return result;
         }
 
-        public List<Realty> GetByOwner(long id, int? limit=null, int? offset=null)
+        public List<Realty> GetByOwner(long id, long? limit=null, long? offset=null)
         {
             List<Realty> result = new List<Realty>();
 
-            DbDataReader reader = ExecuteReader("SELECT * FROM realty WHERE OwnerId="+id.ToString());
+            string command = "SELECT * FROM realty WHERE OwnerId=" + id.ToString()+" ";
+            if (limit.HasValue) command += "LIMIT " + limit.ToString();
+            if (offset.HasValue) command += " OFFSET " + offset.ToString();
+
+            DbDataReader reader = ExecuteReader(command);
             while (reader.Read())
             {
                 result.Add(new Realty {
