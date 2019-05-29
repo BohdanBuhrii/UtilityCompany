@@ -56,11 +56,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\1.sql" />
+    <Content Include="Scripts\CreateTables\news.sql" />
     <Content Include="Scripts\CreateTables\realty.sql" />
     <Content Include="Scripts\CreateTables\tariffs.sql" />
     <Content Include="Scripts\CreateTables\users.sql" />
     <Content Include="Scripts\CreateTables\version.sql" />
     <Content Include="Scripts\CreateTables\meters.sql" />
+    <Content Include="Scripts\2.sql" />
+    <Content Include="Scripts\3.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
